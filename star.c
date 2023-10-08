@@ -1,6 +1,15 @@
+/*
+** EPITECH PROJECT, 2023
+** star
+** File description:
+** main file to run and display a star
+*/
+
 void star(unsigned int size)
 {
-    if (size == 1) {
+    if (size == 0) {
+        return;
+    } else if (size == 1) {
         write(1, "   *\n", 5);
         write(1, "*** ***\n", 8);
         write(1, " *   *\n", 7);
@@ -16,19 +25,4 @@ void star(unsigned int size)
         bas(size);
         pic(size);
     }
-}
-
-
-
-void my_putchar(char c)
-{
-    write(1, &c, 1);
-}
-int main()
-{
-    star(0);
-    star(1);
-    star(2);
-    star(4);
-    star(5);
 }
